@@ -60,4 +60,91 @@ Here is a translation table that defines the addresses based on their leading bi
 
 ![id](/pics/id6.png)
 
+
+
+A quick overview of the OSI model
+-------
+
+If you have different pieces of software and hardware they all have to be able to talk to each other and interact to make your network go. So the OSI 7 layer model is seven distinct functions that a network must do.You can think of it as a universal language for networking.
+
+![osi](/image/1.png)
+
+The Physical Layer
+-------
+It defines how data is transmitted, so in other words, what states represents binary 1's or binary 0's.
+Here's an example: RJ45 connectors are used in Ethernet and you would plug an RJ45 connector into the Network Interface Card of a PC, the standards associated with an RJ45 interface are different to other interfaces such as a V35 connection which is used in some WAN implementations.
+So we've got things like coaxial cable, fiber cables, wireless connections, Ethernet ports.
+The Physical Layer is often the easiest layer to identify because it's focused on physical devices with physical cabling.
+Here are some Layer 1 problems to watch out for:
+Defunct cables, for example damaged wires or broken connectors
+Broken hardware network devices, for example damaged circuits
+Stuff being unplugged
+
+If there are issues in Layer 1, anything beyond Layer 1 will not function properly.
+
+The Data Link Layer
+-------------
+At this layer, we have frames being sent over the network.Framing is a function of the data link layer. It provides a way for a sender to transmit a set of bits that are meaningful to the receiver.
+After creating frames, Data link layer adds physical addresses (MAC address) of sender and/or receiver in the header of each frame.
+Data link layer provides the mechanism of error control in which it detects and retransmits damaged or lost frames.The data rate must be constant on both sides else the data may get corrupted.
+
+Network Layer
+---
+
+The network layer protocols determine which route is suitable from source to destination. This function of network layer is known as **routing**. In order to identify each device on internetwork uniquely, network layer defines an addressing scheme. The sender & receiver’s IP address are placed in the header by network layer. Such an address distinguishes each device uniquely and universally.
+Segment in Network layer is referred as Packet.
+
+Transport Layer
+------
+
+Transport layer provides services to application layer and takes services from network layer. The data in the transport layer is referred to as Segments. It is responsible for the End to End Delivery of the complete message. The transport layer also provides the acknowledgement of the successful data transmission and re-transmits the data if an error is found.
+
+Transport Layer reads the port number from its header and forwards the Data which it has received to the respective application. It also performs sequencing and reassembling of the segmented data.
+Transport layer receives the formatted data from the upper layers, performs Segmentation and also implements Flow & Error control to ensure proper data transmission. It also adds Source and Destination port number in its header and forwards the segmented data to the Network Layer.
+
+Session Layer
+-----
+
+This layer is responsible for establishment of connection, maintenance of sessions, authentication and also ensures security.
+The functions of the session layer are :
+
+**Session establishment, maintenance and termination**: The layer allows the two processes to establish, use and terminate a connection.
+
+**Synchronization**: This layer allows a process to add checkpoints which are considered as synchronization points into the data. These synchronization point help to identify the error so that the data is re-synchronized properly, and ends of the messages are not cut prematurely and data loss is avoided.
+
+**Dialog Controller** : The session layer allows two systems to start communication with each other in half-duplex or full-duplex.
+
+
+Presentation Layer
+----
+
+Presentation layer is also called the Translation layer.The data from the application layer is extracted here and manipulated as per the required format to transmit over the network.
+The functions of the presentation layer are :
+
+**Translation** : For example, ASCII to EBCDIC.
+
+**Encryption/ Decryption** : Data encryption translates the data into another form or code. The encrypted data is known as the cipher text and the decrypted data is known as plain text. A key value is used for encrypting as well as decrypting data.
+
+**Compression**: Reduces the number of bits that need to be transmitted on the network.
+
+Application Layer
+----
+
+Application layer interacts with an application program, which is the highest level of OSI model. The application layer is the OSI layer, which is closest to the end-user. It means OSI application layer allows users to interact with other software application.
+
+Application layer interacts with software applications to implement a communicating component. The interpretation of data by the application program is always outside the scope of the OSI model.
+
+Example of the application layer is an application such as file transfer, email, remote login, etc.
+
+Protocols Supported at Various Levels
+-----
+
+![level](/image/2.png)
+
+Differences between OSI & TCP/IP
+----
+
+![diff](/image/3.png)
+
+
 I hope that all made sense, I just wanted to touch on the basics I will be be covering IP addressing in several other lessons.
