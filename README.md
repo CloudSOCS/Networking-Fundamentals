@@ -60,7 +60,7 @@ Here is a translation table that defines the addresses based on their leading bi
 
 ![id](/pics/id6.png)
 
-
+I hope that all made sense, I just wanted to touch on the basics I will be be covering IP addressing in several other lessons.
 
 A quick overview of the OSI model
 -------
@@ -147,4 +147,4 @@ Differences between OSI & TCP/IP
 ![diff](/image/3.png)
 
 
-I hope that all made sense, I just wanted to touch on the basics I will be be covering IP addressing in several other lessons.
+
