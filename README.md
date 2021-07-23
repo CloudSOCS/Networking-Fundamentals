@@ -148,3 +148,22 @@ Differences between OSI & TCP/IP
 
 
 
+Routers and Switches
+---
+
+![switch](/pic/1.png)
+
+A switch is a layer two device it's a device which you can plug a network cable into, and it helps to move data between computers.So a computer here can communicate with another computer via the switch.And the switch actually keeps a table of addresses, which are known as media access control addresses, MAC addresses.And it uses that to know which port to send the data out of.
+Now, let's say we have another network also with a series of computers connected by a switch.And each of these has a separate range of IP addresses.That means these are different network segments.Now, IP, the protocol which is used for this addressing, runs at layer three.So what we need is we need a layer three device if we want to be able to send data from a computer with an IP in this range to a computer with an IP address in a different IP range.That's known as a router. That's a layer three device.So switches can't do that. They're only layer two, which means they don't understand IP.
+So if we want to send data from this computer here to the computer at the top here, we send that data to the router. The router understands where the different networks are.
+
+![route](/pic/4.png)
+
+![table](/pic/rout-table.png)
+
+So this is the route table associated with the router, and that is the table that it uses to look up where to send the destination traffic to Now, in this case, it's very simple. The router has two interfaces and it knows which interface corresponds with which network. So if a communication has a destination in the 10-range, it knows to send it out of eth1. So that's a very basic level of how routing works. Obviously, there'd be a lot more complexity and there can be many more networks as well.But that's just to show you the basic level, how route tables work.
+
+
+
+
+
